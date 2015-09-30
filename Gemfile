@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Use Kaminari Gem for pagination
+gem 'kaminari'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
