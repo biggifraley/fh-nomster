@@ -1,4 +1,6 @@
 Nomster::Application.configure do
+  # Set up default URL options for devise gem
+  config.action_mailer.default_url_options = { :host => 'nomster-biggi-fraley.herokuapp.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
