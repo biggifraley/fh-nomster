@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Use the SimpleForm Gem for all our forms
+gem 'simple_form'
+
 # Use Kaminari Gem for pagination
 gem 'kaminari'
 
