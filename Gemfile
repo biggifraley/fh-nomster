@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+# Use the figaro gem for environment variables
+gem "figaro", ">= 1.0.0"
+
+# Use the geocoder gem to geocode addresses
+gem "geocoder"
+
 # Use the devise gem for user authentication
 gem 'devise', '>= 3.2.4'
 
