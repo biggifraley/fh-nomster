@@ -12,7 +12,7 @@
 			<small><%= place.user.email %></small>
     	<% end %>
 
-    	<% if place.comments.present? %>
+    	<% if place.comments.order("id ASC").last.humanized_rating.present? %>
 	    	<div class="col-xs-12">
 	    		<blockquote>
 					<% if place.comments.last.humanized_rating.present? %>
