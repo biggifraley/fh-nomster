@@ -1,7 +1,6 @@
 <div class="booyah-box col-xs-10 col-xs-offset-1">
 	<h1><%= @place.name %></h1>
-	<br />
-	<i><%= @place.address %></i>
+	<i><small><%= @place.address %></small></i>
 	<br /><br />
 	<p><%= @place.description %></p>
 
@@ -30,8 +29,15 @@
 		
 		<div id="map"></div>
 	<% end %>
+    <div class="clear"></div>
     <br />
-	<div class="pull-right">
+	<% @place.photos.each do |photo| %>
+			<div>
+  			<%= photo.caption %>
+			</div>
+	<% end %>
+    <br />
+    <div class="pull-right">
 		<% if current_user && current_user == @place.user %>
 		<%= link_to 'Edit', edit_place_path(@place), :class => 'btn btn-primary' %>
 		<%= link_to 'Delete', place_path(@place), :method => :delete, :data => {:confirm => 'Are you sure you want to delete this?'},:class => 'btn btn-danger' %>
