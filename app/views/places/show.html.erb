@@ -31,11 +31,14 @@
 	<% end %>
     <div class="clear"></div>
     <br />
-	<% @place.photos.each do |photo| %>
+    <div class="pics">
+		<% @place.photos.each do |photo| %>
 			<div>
+			<%= image_tag photo.picture %>
   			<%= photo.caption %>
 			</div>
-	<% end %>
+		<% end %>
+	</div>
     <br />
     <div class="pull-right">
 		<% if current_user && current_user == @place.user %>
