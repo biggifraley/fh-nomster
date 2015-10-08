@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Use carrierwave for image uploading
 gem 'carrierwave'
 
+# Enable carrierwave communication with Amazon S3
+gem "fog", "~> 1.3.1"
+
 # Use the figaro gem for environment variables
 gem "figaro", ">= 1.0.0"
 
